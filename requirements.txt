@@ -6,3 +6,4 @@ pillow
 keras
 ipykernel
 matplotlib
+shutit
