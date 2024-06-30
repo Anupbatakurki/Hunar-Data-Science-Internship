@@ -1,11 +1,14 @@
 from flask import Flask, request, render_template, redirect, url_for
-import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
+import numpy as np
 import os
 
 app = Flask(__name__)
-model = load_model('path/to/your/model.h5')  # Update with the correct path to your model
+
+# Load the trained model
+MODEL_PATH = 'path/to/your/saved_model.h5'  # Update with the correct path to your saved model
+model = load_model(MODEL_PATH)
 
 # Ensure the upload folder exists
 UPLOAD_FOLDER = 'uploads'
@@ -47,4 +50,3 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
