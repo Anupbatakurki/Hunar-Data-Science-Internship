@@ -1,3 +1,5 @@
+#Before run the file add model path and upload folder path and run
+
 from flask import Flask, request, render_template, redirect, url_for
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
